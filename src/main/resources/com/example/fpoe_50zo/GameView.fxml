@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="rootPane" prefHeight="720.0" prefWidth="1080.0"
+            styleClass="root-pane"
+            stylesheets="@styles.css"
+            xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.fpoe_50zo.controller.GameController">
+
+    <top>
+        <HBox fx:id="oponentesBox" alignment="CENTER" prefHeight="150.0" spacing="50.0" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets top="20.0" />
+            </padding>
+            <children>
+
+                <VBox fx:id="cpu1Box" alignment="CENTER" spacing="5.0" visible="false"
+                      style="-fx-background-color: rgba(64,40,24,0.7); -fx-background-radius: 10; -fx-padding: 10; -fx-border-color: #C9A46D; -fx-border-width: 1; -fx-border-radius: 10;">
+                    <children>
+                        <Label fx:id="cpu1NameLabel" styleClass="label-nombre-cpu" text="CPU 1" />
+                        <HBox fx:id="cpu1HandBox" alignment="CENTER" prefHeight="100.0" spacing="-20.0" />
+                    </children>
+                </VBox>
+
+                <VBox fx:id="cpu2Box" alignment="CENTER" spacing="5.0" visible="false"
+                      style="-fx-background-color: rgba(64,40,24,0.7); -fx-background-radius: 10; -fx-padding: 10; -fx-border-color: #C9A46D; -fx-border-width: 1; -fx-border-radius: 10;">
+                    <children>
+                        <Label fx:id="cpu2NameLabel" styleClass="label-nombre-cpu" text="CPU 2" />
+                        <HBox fx:id="cpu2HandBox" alignment="CENTER" prefHeight="100.0" spacing="-20.0" />
+                    </children>
+                </VBox>
+
+                <VBox fx:id="cpu3Box" alignment="CENTER" spacing="5.0" visible="false"
+                      style="-fx-background-color: rgba(64,40,24,0.7); -fx-background-radius: 10; -fx-padding: 10; -fx-border-color: #C9A46D; -fx-border-width: 1; -fx-border-radius: 10;">
+                    <children>
+                        <Label fx:id="cpu3NameLabel" styleClass="label-nombre-cpu" text="CPU 3" />
+                        <HBox fx:id="cpu3HandBox" alignment="CENTER" prefHeight="100.0" spacing="-20.0" />
+                    </children>
+                </VBox>
+
+            </children>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="20.0" BorderPane.alignment="CENTER">
+            <children>
+
+                <Label fx:id="sumaLabel" text="Suma: 0">
+                    <font>
+                        <Font name="System Bold" size="36.0" />
+                    </font>
+                </Label>
+
+                <HBox alignment="CENTER" spacing="30.0">
+                    <children>
+                        <ImageView fx:id="mazoView" fitHeight="150.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                        </ImageView>
+
+                        <ImageView fx:id="ultimaCartaView" fitHeight="150.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
+                    </children>
+                </HBox>
+
+                <Label fx:id="mensajeLabel" text="Cargando...">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Label>
+
+            </children>
+        </VBox>
+    </center>
+
+    <bottom>
+        <VBox alignment="CENTER" prefHeight="200.0" spacing="10.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label styleClass="label-nombre-cpu" text="Tu Mano">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+
+                <HBox fx:id="manoJugadorBox" alignment="CENTER" minHeight="150.0" spacing="-30.0">
+                    <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
+                    </padding>
+                </HBox>
+            </children>
+        </VBox>
+    </bottom>
+</BorderPane>

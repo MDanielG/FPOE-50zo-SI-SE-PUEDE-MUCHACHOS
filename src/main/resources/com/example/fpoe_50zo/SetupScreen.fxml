@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox styleClass="root-pane" alignment="CENTER" prefHeight="720.0" prefWidth="1080.0"
+      spacing="25.0" stylesheets="@styles.css"
+      xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.fpoe_50zo.controller.SetupScreenController">
+    <children>
+        <Label text="Configuración de la Partida" styleClass="title-label" />
+        <Label text="Selecciona el número de oponentes:" />
+        <ChoiceBox fx:id="choiceBoxOponentes" prefWidth="200.0" />
+        <Button fx:id="startButton" mnemonicParsing="false"
+                onAction="#onEmpezarClick" text="Empezar Juego" />
+        <Label fx:id="errorLabel" textFill="RED" />
+    </children>
+    <padding>
+        <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+    </padding>
+</VBox>
