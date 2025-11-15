@@ -1,0 +1,9 @@
+module:com.example.fpoe_50zo
+com.example.fpoe_50zo
+com.example.fpoe_50zo.controller
+com.example.fpoe_50zo.model.card
+com.example.fpoe_50zo.model.deck
+com.example.fpoe_50zo.model.exceptions
+com.example.fpoe_50zo.model.game
+com.example.fpoe_50zo.model.player
+com.example.fpoe_50zo.view
